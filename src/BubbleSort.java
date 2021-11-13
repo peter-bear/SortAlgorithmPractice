@@ -1,10 +1,26 @@
 
 public class BubbleSort {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("Bubble");
-		
+	/**
+	 * 不断把大的往后退
+	 * @param <E>
+	 * @param arr
+	 */
+	public static <E extends Comparable<E>> void Sort(E[] arr) {
+		boolean changeArr = false;
+		for(int i=arr.length-1;i>0;i--) {
+			for(int j=0;j<i;j++) {
+				if(arr[j].compareTo(arr[j+1])>0) {
+					E tmp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = tmp;
+					changeArr = true;
+				}
+			}
+			if(!changeArr)
+				break;
+			else
+				changeArr = false;
+		}
 	}
 
 }

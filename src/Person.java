@@ -16,7 +16,9 @@ public class Person implements Comparable{
 	}
 
 
-
+	/**
+	 * Compare age first, if age equal, compare their name
+	 */
 	@Override
 	public int compareTo(Object o) {
 		// TODO Auto-generated method stub
