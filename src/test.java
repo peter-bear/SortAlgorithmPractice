@@ -18,7 +18,17 @@ public class test {
 		BubbleSort.Sort(people);
 		System.out.println(Arrays.toString(people));
 		
+		initArr(people);
+		System.out.println("\nBubble Sort");
+		System.out.println(Arrays.toString(people));
+		InsertionSort.Sort2(people);
+		System.out.println(Arrays.toString(people));	
 		
+		initArr(people);
+		System.out.println("\nMerge Sort");
+		System.out.println(Arrays.toString(people));
+		MergeSort.Sort(people);
+		System.out.println(Arrays.toString(people));	
 	}
 	
 	private static void initArr(Person[] people) {

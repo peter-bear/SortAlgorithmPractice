@@ -1,7 +1,7 @@
 
 public class BubbleSort {
 	/**
-	 * 不断把大的往后退
+	 * Put largest to the end
 	 * @param <E>
 	 * @param arr
 	 */
