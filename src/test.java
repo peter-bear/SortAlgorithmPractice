@@ -19,7 +19,7 @@ public class test {
 		System.out.println(Arrays.toString(people));
 		
 		initArr(people);
-		System.out.println("\nBubble Sort");
+		System.out.println("\nInsertion Sort");
 		System.out.println(Arrays.toString(people));
 		InsertionSort.Sort2(people);
 		System.out.println(Arrays.toString(people));	

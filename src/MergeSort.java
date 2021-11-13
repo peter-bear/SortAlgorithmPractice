@@ -15,10 +15,13 @@ public class MergeSort {
 	 * @param right
 	 */
 	private static <E extends Comparable<E>> void divide(E[] arr, E[] tmp, int left, int right) {
+	
 		int pivote = (left+right)/2;
+		//n == 1, left == right
 		if(left<right) {
-			divide(arr, tmp, left, pivote);
+			divide(arr, tmp, left, pivote);	
 			divide(arr, tmp, pivote+1, right);
+			
 			conquer(arr, tmp, left, pivote+1,right);
 		}
 	}
@@ -37,15 +40,11 @@ public class MergeSort {
 		int nums = rightEnd - leftPos+1;
 		int cur = leftPos;
 		while(leftPos<= leftEnd && rightPos <= rightEnd) {
-			if(arr[leftPos].compareTo(arr[rightPos])<0) {
+			if(arr[leftPos].compareTo(arr[rightPos])<=0) {
 				tmp[cur++] = arr[leftPos++];
 				
 			}
-			else if(arr[leftPos].compareTo(arr[rightPos])>0) {
-				tmp[cur++] = arr[rightPos++];
-			}
-			else {
-				tmp[cur++] = arr[leftPos++];
+			else{
 				tmp[cur++] = arr[rightPos++];
 			}
 		}
