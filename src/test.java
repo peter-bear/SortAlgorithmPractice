@@ -29,6 +29,12 @@ public class test {
 		System.out.println(Arrays.toString(people));
 		MergeSort.Sort(people);
 		System.out.println(Arrays.toString(people));	
+		
+		initArr(people);
+		System.out.println("\nQuick Sort");
+		System.out.println(Arrays.toString(people));
+		QuickSort.Sort(people);
+		System.out.println(Arrays.toString(people));	
 	}
 	
 	private static void initArr(Person[] people) {
